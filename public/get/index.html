@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET — Listar Pessoas</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <h1>📋 Sistema de Cadastro — CRUD</h1>
+</header>
+
+<nav>
+    <a href="/" class="home">🏠 Início</a>
+    <a href="/post/" class="post">➕ POST</a>
+    <a href="/get/" class="get ativo">📄 GET</a>
+    <a href="/put/" class="put">✏️ PUT</a>
+    <a href="/delete/" class="del">🗑️ DELETE</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>
+            📄 Listagem de Pessoas
+            <span class="badge badge-get">GET</span>
+        </h2>
+
+        <div class="btn-group topo">
+            <button class="btn-get" onclick="carregarPessoas()">🔄 Atualizar Lista</button>
+        </div>
+
+        <div id="alerta" class="alerta"></div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>E-mail</th>
+                        <th>Idade</th>
+                        <th>Telefone</th>
+                        <th>RG</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>UF</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo">
+                    <tr><td colspan="11" class="td-vazio">Carregando dados...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="total" class="total"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

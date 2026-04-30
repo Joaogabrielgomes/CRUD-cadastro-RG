@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT — Atualizar Pessoa</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <h1>📋 Sistema de Cadastro — CRUD</h1>
+</header>
+
+<nav>
+    <a href="/" class="home">🏠 Início</a>
+    <a href="/post/" class="post">➕ POST</a>
+    <a href="/get/" class="get">📄 GET</a>
+    <a href="/put/" class="put ativo">✏️ PUT</a>
+    <a href="/delete/" class="del">🗑️ DELETE</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>
+            ✏️ Atualizar Pessoa
+            <span class="badge badge-put">PUT</span>
+        </h2>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="rgBusca">🔍 Buscar pelo RG</label>
+                <input type="text" id="rgBusca" placeholder="Ex: 12.345.678-9">
+            </div>
+            <div class="form-group alinhar-fim">
+                <label>&nbsp;</label>
+                <button class="btn-buscar" onclick="buscarPessoa()">🔍 Buscar</button>
+            </div>
+        </div>
+
+        <hr class="divisor">
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="idOculto">ID (gerado automaticamente)</label>
+                <input type="text" id="idOculto" readonly placeholder="Preenchido após busca">
+            </div>
+            <div class="form-group">
+                <label for="rgAtualizar">RG</label>
+                <input type="text" id="rgAtualizar" placeholder="Preenchido após busca">
+            </div>
+            <div class="form-group">
+                <label for="nomeAtualizar">Nome</label>
+                <input type="text" id="nomeAtualizar" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="sobrenomeAtualizar">Sobrenome</label>
+                <input type="text" id="sobrenomeAtualizar" placeholder="Sobrenome">
+            </div>
+            <div class="form-group full">
+                <label for="emailAtualizar">E-mail</label>
+                <input type="email" id="emailAtualizar" placeholder="email@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label for="idadeAtualizar">Idade</label>
+                <input type="number" id="idadeAtualizar" placeholder="Idade">
+            </div>
+            <div class="form-group">
+                <label for="telefoneAtualizar">Telefone</label>
+                <input type="text" id="telefoneAtualizar" placeholder="(11) 99999-0000">
+            </div>
+            <div class="form-group">
+                <label for="ruaAtualizar">Rua</label>
+                <input type="text" id="ruaAtualizar" placeholder="Rua">
+            </div>
+            <div class="form-group">
+                <label for="bairroAtualizar">Bairro</label>
+                <input type="text" id="bairroAtualizar" placeholder="Bairro">
+            </div>
+            <div class="form-group">
+                <label for="cidadeAtualizar">Cidade</label>
+                <input type="text" id="cidadeAtualizar" placeholder="Cidade">
+            </div>
+            <div class="form-group">
+                <label for="estadoAtualizar">Estado</label>
+                <input type="text" id="estadoAtualizar" placeholder="UF" maxlength="2">
+            </div>
+        </div>
+
+        <div id="alerta" class="alerta"></div>
+
+        <div class="btn-group">
+            <button class="btn-put" onclick="atualizarPessoa()">✏️ Atualizar</button>
+            <button class="btn-limpar" onclick="limparFormulario()">🧹 Limpar</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

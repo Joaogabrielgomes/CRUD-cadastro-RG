@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE — Excluir Pessoa</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <h1>📋 Sistema de Cadastro — CRUD</h1>
+</header>
+
+<nav>
+    <a href="/" class="home">🏠 Início</a>
+    <a href="/post/" class="post">➕ POST</a>
+    <a href="/get/" class="get">📄 GET</a>
+    <a href="/put/" class="put">✏️ PUT</a>
+    <a href="/delete/" class="del ativo">🗑️ DELETE</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>
+            🗑️ Excluir Pessoa
+            <span class="badge badge-delete">DELETE</span>
+        </h2>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="rgBusca">🔍 Buscar pelo RG</label>
+                <input type="text" id="rgBusca" placeholder="Ex: 12.345.678-9">
+            </div>
+            <div class="form-group alinhar-fim">
+                <label>&nbsp;</label>
+                <button class="btn-buscar" onclick="buscarPessoa()">🔍 Buscar</button>
+            </div>
+        </div>
+
+        <div id="painel-confirmacao" class="oculto">
+            <hr class="divisor">
+
+            <p class="aviso">⚠️ Registro encontrado. Confirme os dados antes de excluir:</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text" id="idExibir" readonly>
+                </div>
+                <div class="form-group">
+                    <label>RG</label>
+                    <input type="text" id="rgExibir" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" id="nomeExibir" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Sobrenome</label>
+                    <input type="text" id="sobrenomeExibir" readonly>
+                </div>
+                <div class="form-group full">
+                    <label>E-mail</label>
+                    <input type="text" id="emailExibir" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Cidade</label>
+                    <input type="text" id="cidadeExibir" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <input type="text" id="estadoExibir" readonly>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-delete" onclick="excluirPessoa()">🗑️ Confirmar Exclusão</button>
+                <button class="btn-limpar" onclick="cancelar()">❌ Cancelar</button>
+            </div>
+        </div>
+
+        <div id="alerta" class="alerta"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Sistema de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📋 Sistema de Cadastro — CRUD</h1>
+</header>
+
+<nav>
+    <a href="/" class="home ativo">🏠 Início</a>
+    <a href="/post/" class="post">➕ POST</a>
+    <a href="/get/" class="get">📄 GET</a>
+    <a href="/put/" class="put">✏️ PUT</a>
+    <a href="/delete/" class="del">🗑️ DELETE</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>Bem-vindo ao Sistema de Cadastro de Pessoas</h2>
+        <p class="card-desc">Selecione uma operação abaixo para gerenciar os registros no banco de dados.</p>
+    </div>
+
+    <div class="cards-grid">
+        <a href="/post/" class="card-link post">
+            <div class="metodo metodo-post">POST</div>
+            <div class="icone">➕</div>
+            <h3>Cadastrar Pessoa</h3>
+            <p>Adiciona um novo registro de pessoa no banco de dados.</p>
+        </a>
+
+        <a href="/get/" class="card-link get">
+            <div class="metodo metodo-get">GET</div>
+            <div class="icone">📄</div>
+            <h3>Listar Pessoas</h3>
+            <p>Exibe todos os registros cadastrados em uma tabela.</p>
+        </a>
+
+        <a href="/put/" class="card-link put">
+            <div class="metodo metodo-put">PUT</div>
+            <div class="icone">✏️</div>
+            <h3>Atualizar Pessoa</h3>
+            <p>Busca um registro pelo RG e atualiza seus dados.</p>
+        </a>
+
+        <a href="/delete/" class="card-link del">
+            <div class="metodo metodo-delete">DELETE</div>
+            <div class="icone">🗑️</div>
+            <h3>Excluir Pessoa</h3>
+            <p>Remove um registro do banco de dados pelo RG.</p>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
